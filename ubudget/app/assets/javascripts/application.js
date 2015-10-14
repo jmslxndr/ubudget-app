@@ -14,3 +14,22 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).on('page:change', function() {
+
+	// $('#arrow1').setTimeout(function() {
+	// 	$('#arrow1').addClass('animated bounce');
+	// 	$('#arrow1').removeClass('animated bounce'), 2000
+	// })
+
+
+		function scrollToTag(aid){
+    var tag = $(aid);
+    $('html,body').animate({scrollTop: tag.offset().top},'slow');
+	}
+
+	$('#arrow1').on('click', function() {
+		scrollToTag('#about');
+	})	
+
+});

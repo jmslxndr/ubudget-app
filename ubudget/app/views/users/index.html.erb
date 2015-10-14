@@ -1,1 +1,29 @@
-<h1>Hello</h1>
+<div class="top-index">
+		<div class="index-login">
+			<ul>
+				<li class="animated bounceInLeft"><%= link_to 'Sign Up!', new_user_registration_path %></li>
+				<li class="animated bounceInRight"><%= link_to 'Sign In!',new_user_session_path %></li>
+			</ul>
+		</div>
+		<div class="animated slideInUp" id="short-info">
+			<p >uBudget simplifies the budgeting experience!<br>Sign up today and start taking control over your finances.</p>
+		</div>
+		<%= link_to image_tag('arrow-down1.png', class: 'animated infinite pulse', id: 'arrow1'), "#about"%>
+</div>
+
+<div class="about-index" id="about">
+	<div class="container">
+		<div class="col-md-6">
+			<%= link_to image_tag('tree_graph.png', id: 'tree-pic') %>
+		</div>
+		<div class="col-md-6" id="about-information">
+			<h2>About uBudget</h2>
+			<p>Bacon ipsum dolor amet boudin esse doner cupim in aute tongue tenderloin tempor ham ground round sed beef reprehenderit. Laboris pastrami in mollit ribeye. Consectetur brisket cillum short loin meatball sint. Shank ex mollit sirloin minim adipisicing. Bacon ipsum dolor amet boudin esse doner cupim in aute tongue tenderloin tempor ham ground round sed beef reprehenderit.</p>
+		</div>
+
+		<div class="col-md-6" id="testimonials">
+			<h2>Testimonials</h2>
+			<p></p>
+		</div>
+	</div>	
+</div>
