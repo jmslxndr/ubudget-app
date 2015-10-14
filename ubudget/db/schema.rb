@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151013195325) do
+ActiveRecord::Schema.define(version: 20151014181824) do
 
   create_table "financials", force: :cascade do |t|
     t.decimal  "wage"
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 20151013195325) do
     t.decimal  "misc_expenses"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.integer  "user_id"
   end
 
   create_table "users", force: :cascade do |t|
