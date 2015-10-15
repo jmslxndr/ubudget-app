@@ -40,6 +40,7 @@
 
 $white: #ffffff;
 $nice-blue: #4B62CD;
+$blue2: #4272CE;
 $gray: #DDDDDD;
 
 body {
@@ -154,7 +155,7 @@ body {
 
     footer {
         width: 100%;
-        height: 300px;
+        height: 150px;
         background-color: #333333;
 
         .container {
@@ -215,30 +216,51 @@ body {
     #dashboard-area {
 
         #table {
-            margin-top: 50px;
+            // margin-top: 20px;
             // border-bottom: 1px solid gray;
         }
+
+        .greeting {
+            float: right;
+            position: relative;
+            top: 38px;
+            margin-top: 25px;
+            margin-right: 15px;
+        }
     }
+
 
     #summary, #income, #expenses {
         text-align: left;
         margin-top: 20px;
+        color: $blue2;
+
+        .summary-title {
+            text-align: center;
+        }
 
         input {
             width: 150px;
             margin-bottom: 10px;
+            color: $blue2
+        }
+
+        p {
+            text-align: center;
         }
     }
 
-    #expense_form, #income_form {
-        border: 1px solid $gray;
-        border-radius: 15px;
-        padding: 25px;
+    #expense_form, #income_form, #summary_form {
+        border-right: 1px solid $gray;
+        border-left: 1px solid $gray;
+        border-bottom: 1px solid $gray;
+        border-radius: 0 0 15px 15px;
 
         #h1-center {
             text-align: center;
             font-size: 2em;
             text-decoration: underline;
+            margin-top: 0;
             margin-bottom: 35px;
         }
 
@@ -248,8 +270,11 @@ body {
             text-decoration: underline;
             margin-bottom: 35px;
         }
-    }
 
+        #column-before-graph {
+            border-right: 1px solid $gray;
+        }
+    }
 }
 
 

@@ -1,6 +1,6 @@
  <div class="container" id="income_form">
-	<div class="col-md-3">
-		<h1 id="h1-left">Income</h1>
+ 	<div class="col-md-12"><h1 id="h1-center">Income</h1></div>
+	<div class="col-md-6" id="column-before-graph">
 		 <%= form_for @financial do |f| %>
 		 	<p>
 		 		<%= f.label :wage, "Yearly Income" %><br>
@@ -19,7 +19,10 @@
 		 		<%= f.text_field :misc_income, value: 0  %>
 		 	</p>
 
-			<%= submit_tag 'Submit' %>
+			<p><%= submit_tag 'Submit' %></p>
 		<% end %>
+	</div>
+	<div class="col-md-6">
+		<p>This is where the graph goes.</p>
 	</div>
 </div>		
