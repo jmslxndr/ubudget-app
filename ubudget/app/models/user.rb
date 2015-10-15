@@ -4,5 +4,12 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_many :financials
+  has_one :financial
+
+  after_create :make_financial
+
+  def make_financial
+  	self.create_financial
+  end
+
 end

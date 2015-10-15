@@ -1,23 +1,19 @@
 <div class="dashboard">
-	
 	<div class="container" id="dashboard-area">
-		<ul class="tab-list">
-			<li class="active"><a class="tab-control" href="tab-1">Summary</a></li>
-			<li><a class="tab-control" href="tab-2">Income</a></li>
-			<li><a class="tab-control" href="tab-2">Expenses</a></li>
-		</ul>
+		<div class="col-md-12" id="table">			
+			<!-- Nav tabs -->
+			<ul class="nav nav-tabs" role="tablist">
+			  <li role="presentation" class="active"><a href="#summary" aria-controls="summary" role="tab" data-toggle="tab">Summary</a></li>
+			  <li role="presentation"><a href="#income" aria-controls="income" role="tab" data-toggle="tab">Income</a></li>
+			  <li role="presentation"><a href="#expenses" aria-controls="expenses" role="tab" data-toggle="tab">Expenses</a></li>
+			</ul>
 
-		<div class="tab-panel active" id="tab1">
-			<%= render 'financials/income' %>
-		</div>
-		
-		<div class="tab-panel" id="tab2">
-		
-		</div>
-
-		<div class="tab-panel" id="tab3">
-			
-		</div>
-	</div>
-
-</div>
+			<!-- Tab panes -->
+			<div class="tab-content">
+			  <div role="tabpanel" class="tab-pane active" id="summary"><%= render 'financials/summary' %></div>
+			  <div role="tabpanel" class="tab-pane" id="income"><%= render 'financials/income' %></div>
+			  <div role="tabpanel" class="tab-pane" id="expenses"><%= render 'financials/expenses' %></div>
+			</div>
+		</div>  
+	</div>	
+</div>	
