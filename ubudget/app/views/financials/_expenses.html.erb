@@ -1,0 +1,78 @@
+<div class="container" id="expense_form">
+	<h1 id="h1-center">Expenses</h1>
+	<div class="col-md-3">
+		 <%= form_for @financial do |f| %>
+		 	<p>
+		 		<%= f.label :rent, "Monthly Rent" %><br>
+		 		<%= f.text_field :rent, value: 0  %>
+		 	</p>
+		 	<p>
+		 		<%= f.label :home_maintenance, "Home Maintenance" %><br>
+		 		<%= f.text_field :home_maintenance, value: 0  %>
+		 	</p>
+		 	<p>
+		 		<%= f.label :electricity, "Electricity" %><br>
+		 		<%= f.text_field :electricity, value: 0  %>
+		 	</p>
+		 	<p>
+		 		<%= f.label :water, "Water" %><br>
+		 		<%= f.text_field :water, value: 0  %>
+		 	</p>
+		 	<p>
+		 		<%= f.label :gas_oil, "Gas/Oil" %><br>
+		 		<%= f.text_field :gas_oil, value: 0  %>
+		 	</p>
+		</div> 
+		<div class="col-md-3">	
+		 	<p>
+		 		<%= f.label :phone, "Phone" %><br>
+		 		<%= f.text_field :phone, value: 0  %>
+		 	</p>
+		 	<p>
+		 		<%= f.label :food, "Food" %><br>
+		 		<%= f.text_field :food, value: 0  %>
+		 	</p>
+		 	<p>
+		 		<%= f.label :insurance, "Health Insurance" %><br>
+		 		<%= f.text_field :insurance, value: 0  %>
+		 	</p>
+		 	<p>
+		 		<%= f.label :car_payment, "Car Payment" %><br>
+		 		<%= f.text_field :car_payment, value: 0  %>
+		 	</p>
+		 	<p>
+		 		<%= f.label :gas, "Gas" %><br>
+		 		<%= f.text_field :gas, value: 0  %>
+		 	</p>
+		</div> 	
+		<div class="col-md-3">
+		 	<p>
+		 		<%= f.label :car_insurance, "Car Insurance" %><br>
+		 		<%= f.text_field :car_insurance, value: 0  %>
+		 	</p>
+		 	<p>
+		 		<%= f.label :credit_cards, "Credit Cards" %><br>
+		 		<%= f.text_field :credit_cards, value: 0  %>
+		 	</p>
+		 	<p>
+		 		<%= f.label :student_loan, "Student Loan" %><br>
+		 		<%= f.text_field :student_loan, value: 0  %>
+		 	</p>
+		 	 	<p>
+		 		<%= f.label :other_loans, "Other Loans" %><br>
+		 		<%= f.text_field :other_loans, value: 0  %>
+		 	</p>
+		 	 	<p>
+		 		<%= f.label :misc_expenses, "Misc. Expenses" %>
+		 		<%= f.text_field :misc_expenses, value: 0  %>
+		 	</p>
+			<%= submit_tag 'Submit' %>
+		<% end %>
+		</div>	
+		<div class="col-md-3">
+			<!-- THIS IS WHERE THE GRAPH GOES -->
+			<p>This is where the graph goes.</p>
+		</div>
+</div>
+
+

@@ -39,6 +39,8 @@
 }
 
 $white: #ffffff;
+$nice-blue: #4B62CD;
+$gray: #DDDDDD;
 
 body {
     @include gradientBack;
@@ -206,19 +208,46 @@ body {
     .dashboard {
         width: 100%;
         background-color: $white;
-        height: 650px;
+        height: 700px;
+        color: black;
     }
 
     #dashboard-area {
 
-        .tab-panel {
-            display: none;
+        #table {
+            margin-top: 50px;
+            // border-bottom: 1px solid gray;
+        }
+    }
+
+    #summary, #income, #expenses {
+        text-align: left;
+        margin-top: 20px;
+
+        input {
+            width: 150px;
+            margin-bottom: 10px;
+        }
+    }
+
+    #expense_form, #income_form {
+        border: 1px solid $gray;
+        border-radius: 15px;
+        padding: 25px;
+
+        #h1-center {
+            text-align: center;
+            font-size: 2em;
+            text-decoration: underline;
+            margin-bottom: 35px;
         }
 
-        .tab-panel:active {
-            display: block;
+        #h1-left {
+            text-align: left;
+            font-size: 2em;
+            text-decoration: underline;
+            margin-bottom: 35px;
         }
-
     }
 
 }

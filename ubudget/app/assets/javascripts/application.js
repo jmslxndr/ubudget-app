@@ -32,25 +32,14 @@ $(document).on('page:change', function() {
 		scrollToTag('#about');
 	})	
 
-	$('tab-list').each(function() {
-		var $this = $(this);
-		var $tab = $this.find('li:active');
-		var $link = $tab.find('a');
-		var $panel = $($link.attr('href'));
+	$('#myTabs a').click(function (e) {
+  	e.preventDefault()
+  	$(this).tab('show')
+	})
 
-		$this.on('click', 'tab-control', function(e) {
-			e.preventDefault();
-			var $link = $(this);
-			var id = this.hash;
-
-			if (id && !$link.is('.active')) {
-				$panel.removeClass('active');
-				$tab.removeClass('active');
-
-				$panel = $(id).addClass('active');
-				$tab = $link.parent().addClass('active');
-			}
-		});
-	});
+	$('#myTabs a[href="#summary"]').tab('show') // Select tab by name
+	$('#myTabs a[href="#income"]').tab('show') // Select tab by name
+	$('#myTabs a[href="#expenses"]').tab('show') // Select tab by name
+	
 
 });

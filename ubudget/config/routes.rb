@@ -5,8 +5,8 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
 
-  get 'users/dashboard', as: 'dashboard'
-
+  get 'users/dashboard', to: 'users#dashboard', as: 'dashboard'
+  resources :financials
   root 'users#index'
 
 end
