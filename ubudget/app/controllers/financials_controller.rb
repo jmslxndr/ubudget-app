@@ -4,40 +4,22 @@ class FinancialsController < ApplicationController
 		@financials = Financial.all
 	end
 
-	def create
-		@financial.new
-		if @financial.save
-			respond_to do |format|
-				format.html {redirect_to 'users/dashboard' }
-				format.js
-			end
-		else
-			respond_to do |format|
-				format.html {redirect_to 'users/dashboard', notice: "There was a problem creating your table."}
-				format.js
-			end
-		end		
-	end
-
-	def update
-		if @financial.update(financial_params)	
-			respond_to do |format|
-				format.html {redirect_to 'users/dashboard'}
-				format.js
-			end	
-		else
-			respond_to do |format|
-				format.html {redirect_to 'users/dashboard', notice: "There was a problem updating your finances."}
-				format.js
-			end	
-		end
-	end
-
-	def destroy
+	def edit
+		@financial = Financial.find(params[:id])
 	end
 
 	def new
 		@financial = Financial.new
+	end
+
+	def create
+		@financial = Financial.create(financial_params)
+		redirect_to dashboard_path
+	end
+
+	def update
+		@financial.update(financial_params)	
+		redirect_to dashboard_path
 	end
 
 	private

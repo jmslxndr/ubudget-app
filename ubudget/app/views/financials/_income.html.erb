@@ -1,7 +1,7 @@
  <div class="container" id="income_form">
  	<div class="col-md-12"><h1 id="h1-center">Income</h1></div>
 	<div class="col-md-6" id="column-before-graph">
-		 <%= form_for @financial do |f| %>
+		 <%= form_for(@financial) do |f| %>
 		 	<p>
 		 		<%= f.label :wage, "Yearly Income" %><br>
 		 		<%= f.text_field :wage, value: 0 %>
