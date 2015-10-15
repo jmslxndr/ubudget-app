@@ -1,28 +1,34 @@
  <div class="container" id="income_form">
- 	<div class="col-md-12"><h1 id="h1-center">Income</h1></div>
+ 	
+ 	<div class="col-md-12">
+ 		<h1 id="h1-center">Income</h1>
+ 	</div>
+	
 	<div class="col-md-6" id="column-before-graph">
 		 <%= form_for(@financial) do |f| %>
 		 	<p>
-		 		<%= f.label :wage, "Yearly Income" %><br>
-		 		<%= f.text_field :wage, value: 0 %>
+		 		<%= f.label :wage, "Monthly Income" %><br>
+		 		<%= f.text_field :wage, value: @financial.wage || 0  %>
 		 	</p>
 		 	<p>
 		 		<%= f.label :interest, "Interest Income" %><br>
-		 		<%= f.text_field :interest, value: 0  %>
+		 		<%= f.text_field :interest, value: @financial.interest || 0   %>
 		 	</p>
 		 	<p>
 		 		<%= f.label :investments, "Investment Income" %><br>
-		 		<%= f.text_field :investments, value: 0  %>
+		 		<%= f.text_field :investments, value: @financial.investments || 0  %>
 		 	</p>
 		 	<p>
 		 		<%= f.label :misc_income, "Miscellaneous Income" %><br>
-		 		<%= f.text_field :misc_income, value: 0  %>
+		 		<%= f.text_field :misc_income, value: @financial.misc_income || 0   %>
 		 	</p>
 
 			<p><%= submit_tag 'Submit' %></p>
 		<% end %>
 	</div>
+	
 	<div class="col-md-6">
 		<p>This is where the graph goes.</p>
 	</div>
+
 </div>		

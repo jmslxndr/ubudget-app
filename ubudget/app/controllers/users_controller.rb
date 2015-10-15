@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
 	before_action :authenticate_user!, only: [:dashboard]
+	before_action :set_financial, only: [:dashboard, :index]
 
 	def index
 		@users = User.all
@@ -7,6 +8,12 @@ class UsersController < ApplicationController
 
 
 	def dashboard
-		@financial = Financial.new
 	end
+
+	private
+
+	def set_financial
+		@financial = current_user.financial
+	end
+
 end
