@@ -1,18 +1,15 @@
 <div class="container" id="summary_form">
-	<h1 class="summary-title">Summary</h1>
+	<h1 id="h1-center">Summary</h1>
+	
 	<div class="col-md-4" id="summary-income">
-
+		<p>Total income: $<%= @financial.credits %></p>
 	</div>
 
 	<div class="col-md-4" id="summary-expenses">
-		<% if current_user.financial.wage %>
-			<p>wage is: <%= current_user.financial.wage %></p>
-		<% else %>
-			<p>You have no financial information to show.</p>
-		<% end %>
+		<p>Total expenses: $<%= @financial.expenses %></p>
 	</div>
 
 	<div class="col-md-4" id="summary-surplus">
-		
+		<p>Total surplus: $<%= @financial.credits - @financial.expenses %></p>
 	</div>
 </div>

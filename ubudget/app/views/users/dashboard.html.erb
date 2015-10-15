@@ -1,6 +1,8 @@
 <div class="dashboard">
+	
 	<div class="container" id="dashboard-area">
 		<h4 class='greeting'>Hey, <%= current_user.email %>!</h4>
+		
 		<div class="col-md-12" id="table">			
 			<!-- Nav tabs -->
 			<ul class="nav nav-tabs" role="tablist">
@@ -15,6 +17,8 @@
 			  <div role="tabpanel" class="tab-pane" id="income"><%= render 'financials/income' %></div>
 			  <div role="tabpanel" class="tab-pane" id="expenses"><%= render 'financials/expenses' %></div>
 			</div>
+
 		</div>  
 	</div>	
+	
 </div>	
