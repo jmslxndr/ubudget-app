@@ -4,30 +4,43 @@
  		<h1 id="h1-center">Income</h1>
  	</div>
 	
-	<div class="col-md-6" id="column-before-graph">
-		 <%= form_for(@financial) do |f| %>
-		 	<p>
-		 		<%= f.label :wage, "Monthly Income" %><br>
-		 		<%= f.text_field :wage, value: @financial.wage || 0  %>
-		 	</p>
-		 	<p>
-		 		<%= f.label :interest, "Interest Income" %><br>
-		 		<%= f.text_field :interest, value: @financial.interest || 0   %>
-		 	</p>
-		 	<p>
-		 		<%= f.label :investments, "Investment Income" %><br>
-		 		<%= f.text_field :investments, value: @financial.investments || 0  %>
-		 	</p>
-		 	<p>
-		 		<%= f.label :misc_income, "Miscellaneous Income" %><br>
-		 		<%= f.text_field :misc_income, value: @financial.misc_income || 0   %>
-		 	</p>
-
-			<p><%= submit_tag 'Submit' %></p>
+	<div class="col-md-3">
+	 <%= form_for(@financial) do |f| %>
+	 	<p>
+	 		<%= f.label :wage, "Income" %><br>
+	 		<%= f.text_field :wage, value: @financial.wage || 0  %>
+	 	</p>
+	 	<p>
+	 		<%= f.label :spouse_income, "Spouse's Income" %><br>
+	 		<%= f.text_field :spouse_income, value: @financial.spouse_income || 0  %>
+	 	</p>
+	 	<p>
+	 		<%= f.label :interest, "Interest Income" %><br>
+	 		<%= f.text_field :interest, value: @financial.interest || 0   %>
+	 	</p>
+	 	<p>
+	 		<%= f.label :investments, "Investment Income" %><br>
+	 		<%= f.text_field :investments, value: @financial.investments || 0  %>
+	 	</p>
+	</div>
+	<div class="col-md-3" id="column-before-graph"> 	
+	 	<p>
+	 		<%= f.label :misc_income, "Miscellaneous Income" %><br>
+	 		<%= f.text_field :misc_income, value: @financial.misc_income || 0   %>
+	 	</p> 	
+	 	<p>
+	 		<%= f.label :other_income1, "Other Income 1" %><br>
+	 		<%= f.text_field :other_income1, value: @financial.other_income1 || 0  %>
+	 	</p>
+	 	<p>
+	 		<%= f.label :other_income2, "Other Income 2" %><br>
+	 		<%= f.text_field :other_income2, value: @financial.other_income2 || 0  %>
+	 	</p>		 	
+		<p><%= submit_tag 'Submit' %></p>
 		<% end %>
 	</div>
 	
-	<div class="col-md-6">
+	<div class="col-md-6" id="submit-button">
 		<p>This is where the graph goes.</p>
 	</div>
 

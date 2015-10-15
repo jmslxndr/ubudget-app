@@ -5,16 +5,40 @@
 	<div class="col-md-2">
 		 <%= form_for(@financial) do |f| %>
 		 	<p>
-		 		<%= f.label :rent, "Monthly Rent" %><br>
+		 		<%= f.label :rent, "Rent/Mortgage" %><br>
 		 		<%= f.text_field :rent, value: @financial.rent || 0  %>
+		 	</p>
+		 	<p>
+		 		<%= f.label :second_mortgage, "Second Mortgage" %>
+		 		<%= f.text_field :second_mortgage, value: @financial.second_mortgage || 0  %>
 		 	</p>
 		 	<p>
 		 		<%= f.label :home_maintenance, "Home Maintenance" %><br>
 		 		<%= f.text_field :home_maintenance, value: @financial.home_maintenance || 0 %>
 		 	</p>
 		 	<p>
+		 		<%= f.label :home_improvement, "home_improvement" %>
+		 		<%= f.text_field :home_improvement, value: @financial.home_improvement|| 0  %>
+		 	</p>
+		 	<p>
+		 		<%= f.label :home_insurance, "Home Insurance" %>
+		 		<%= f.text_field :home_insurance, value: @financial.home_insurance || 0  %>
+		 	</p>	
+		 	<p>
 		 		<%= f.label :electricity, "Electricity" %><br>
 		 		<%= f.text_field :electricity, value: @financial.electricity || 0  %>
+		 	</p>
+		 	<p>
+		 		<%= f.label :cable, "Cable" %>
+		 		<%= f.text_field :cable, value: @financial.cable || 0  %>
+		 	</p>
+		 	<p>
+		 		<%= f.label :internet, "Internet" %>
+		 		<%= f.text_field :internet, value: @financial.internet || 0  %>
+		 	</p>
+		 	<p>
+		 		<%= f.label :computer_costs, "Computer Costs" %>
+		 		<%= f.text_field :computer_costs, value: @financial.computer_costs || 0  %>
 		 	</p>
 		 	<p>
 		 		<%= f.label :water, "Water" %><br>
@@ -24,20 +48,16 @@
 		 		<%= f.label :gas_oil, "Gas/Oil" %><br>
 		 		<%= f.text_field :gas_oil, value: @financial.gas_oil || 0   %>
 		 	</p>
-		</div> 
-		
-		<div class="col-md-2">	
 		 	<p>
 		 		<%= f.label :phone, "Phone" %><br>
 		 		<%= f.text_field :phone, value: @financial.phone || 0   %>
 		 	</p>
-		 	<p>
-		 		<%= f.label :food, "Food" %><br>
-		 		<%= f.text_field :food, value: @financial.food || 0  %>
-		 	</p>
-		 	<p>
-		 		<%= f.label :insurance, "Health Insurance" %><br>
-		 		<%= f.text_field :insurance, value: @financial.insurance || 0   %>
+		</div> 
+		
+		<div class="col-md-2">	
+		 <p>
+		 		<%= f.label :car_insurance, "Car Insurance" %><br>
+		 		<%= f.text_field :car_insurance, value: @financial.car_insurance || 0   %>
 		 	</p>
 		 	<p>
 		 		<%= f.label :car_payment, "Car Payment" %><br>
@@ -47,15 +67,63 @@
 		 		<%= f.label :gas, "Vehicle Fuel" %><br>
 		 		<%= f.text_field :gas, value: @financial.gas || 0   %>
 		 	</p>
+		 	<p>
+		 		<%= f.label :auto_repairs, "Auto Repairs" %>
+		 		<%= f.text_field :auto_repairs, value: @financial.auto_repairs || 0  %>
+		 	</p>
+		 	<p>
+		 		<%= f.label :other_auto, "Other Auto" %>
+		 		<%= f.text_field :other_auto, value: @financial.other_auto || 0  %>
+		 	</p>
+		 	<p>
+		 		<%= f.label :travel, "Travel" %>
+		 		<%= f.text_field :travel, value: @financial.travel || 0  %>
+		 	</p>
+		 	<p>
+		 		<%= f.label :food, "Food" %><br>
+		 		<%= f.text_field :food, value: @financial.food || 0  %>
+		 	</p>
+		 	<p>
+		 		<%= f.label :dining_out, "Dining Out" %>
+		 		<%= f.text_field :dining_out, value: @financial.dining_out || 0  %>
+		 	</p>
+		 	<p>
+		 		<%= f.label :dry_cleaning, "Dry Cleaning" %>
+		 		<%= f.text_field :dry_cleaning, value: @financial.dry_cleaning || 0  %>
+		 	</p>
+		 	<p>
+		 		<%= f.label :laundry, "Laundry" %>
+		 		<%= f.text_field :laundry, value: @financial.laundry || 0  %>
+		 	</p>
+		 	<p>
+		 		<%= f.label :entertainment, "Entertainment" %>
+		 		<%= f.text_field :entertainment, value: @financial.entertainment || 0  %>
+		 	</p>
 		 	<br>
 		 	<p><%= submit_tag 'Submit' %></p>
 		</div> 	
 		
 		<div class="col-md-2" id="column-before-graph">
-		 	<p>
-		 		<%= f.label :car_insurance, "Car Insurance" %><br>
-		 		<%= f.text_field :car_insurance, value: @financial.car_insurance || 0   %>
+			<p>
+		 		<%= f.label :insurance, "Health Insurance" %><br>
+		 		<%= f.text_field :insurance, value: @financial.insurance || 0   %>
 		 	</p>
+		 	<p>
+		 		<%= f.label :dental_insurance, "Dental Insurance" %>
+		 		<%= f.text_field :dental_insurance, value: @financial.dental_insurance || 0  %>
+		 	</p>
+		 	<p>
+		 		<%= f.label :life_insurance, "Life Insurance" %>
+		 		<%= f.text_field :life_insurance, value: @financial.life_insurance || 0  %>
+		 	</p>
+		 	<p>
+		 		<%= f.label :childcare, "Child Care" %>
+		 		<%= f.text_field :childcare, value: @financial.childcare || 0  %>
+		 	</p>
+		 	<p>
+		 		<%= f.label :baby_costs, "Baby Costs" %>
+		 		<%= f.text_field :baby_costs, value: @financial.baby_costs || 0  %>
+		 	</p>	
 		 	<p>
 		 		<%= f.label :credit_cards, "Credit Cards" %><br>
 		 		<%= f.text_field :credit_cards, value: @financial.credit_cards || 0   %>
@@ -64,14 +132,27 @@
 		 		<%= f.label :student_loan, "Student Loan" %><br>
 		 		<%= f.text_field :student_loan, value: @financial.student_loan || 0  %>
 		 	</p>
-		 	 	<p>
+		 	<p>
 		 		<%= f.label :other_loans, "Other Loans" %><br>
 		 		<%= f.text_field :other_loans, value: @financial.other_loans || 0   %>
 		 	</p>
-		 	 	<p>
+		 	 <p>
 		 		<%= f.label :misc_expenses, "Misc. Expenses" %>
 		 		<%= f.text_field :misc_expenses, value: @financial.misc_expenses || 0  %>
-		 	</p>
+		 	</p>	
+		 	<p>
+		 		<%= f.label :other_expenses1, "Other Expenses 1" %>
+		 		<%= f.text_field :other_expenses1, value: @financial.other_expenses1 || 0  %>
+		 	</p>		 	
+		 	<p>
+		 		<%= f.label :other_expenses2, "Other Expenses 2" %>
+		 		<%= f.text_field :other_expenses2, value: @financial.other_expenses2 || 0  %>
+		 	</p>	
+		 	<p>
+		 		<%= f.label :other_expenses3, "Other Expenses 3" %>
+		 		<%= f.text_field :other_expenses3, value: @financial.other_expenses3 || 0  %>
+		 	</p>	
+		 		
 		<% end %>
 		<br>
 		<br>
@@ -85,4 +166,10 @@
 
 </div>
 
-
+	
+			
+		 	
+		 	
+		 	
+		 	
+		 	

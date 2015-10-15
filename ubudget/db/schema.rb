@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151014181824) do
+ActiveRecord::Schema.define(version: 20151015193046) do
 
   create_table "financials", force: :cascade do |t|
     t.decimal  "wage"
@@ -33,9 +33,36 @@ ActiveRecord::Schema.define(version: 20151014181824) do
     t.decimal  "student_loan"
     t.decimal  "other_loans"
     t.decimal  "misc_expenses"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
     t.integer  "user_id"
+    t.decimal  "second_mortgage"
+    t.decimal  "auto_repairs"
+    t.decimal  "other_auto"
+    t.decimal  "dining_out"
+    t.decimal  "dental_insurance"
+    t.decimal  "home_improvement"
+    t.decimal  "dry_cleaning"
+    t.decimal  "laundry"
+    t.decimal  "childcare"
+    t.decimal  "cable"
+    t.decimal  "travel"
+    t.decimal  "internet"
+    t.decimal  "computer_costs"
+    t.decimal  "baby_costs"
+    t.decimal  "other_expenses1"
+    t.decimal  "other_expenses2"
+    t.decimal  "other_expenses3"
+    t.decimal  "other_income1"
+    t.decimal  "other_income2"
+    t.decimal  "spouse_income"
+    t.decimal  "life_insurance"
+    t.decimal  "home_insurance"
+    t.decimal  "emergency_savings"
+    t.decimal  "college_savings"
+    t.decimal  "retirement_savings"
+    t.decimal  "other_savings"
+    t.decimal  "entertainment"
   end
 
   create_table "users", force: :cascade do |t|
