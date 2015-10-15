@@ -209,7 +209,7 @@ body {
     .dashboard {
         width: 100%;
         background-color: $white;
-        height: 700px;
+        // height: 700px;
         color: black;
     }
 
@@ -229,16 +229,15 @@ body {
         }
     }
 
+    .summary_area {
+        height: 500px;
+    }
 
-    #summary, #income, #expenses {
+    #summary, #income, #expenses, #savings {
         text-align: left;
         margin-top: 20px;
         color: $blue2;
-
-        // .summary-title {
-        //     text-align: center;
-        //     text-decoration: underline;
-        // }
+        margin-bottom: 60px;
 
         input {
             width: 150px;
@@ -251,7 +250,7 @@ body {
         }
     }
 
-    #expense_form, #income_form, #summary_form {
+    #expense_form, #income_form, #summary_form, #savings_form {
         border-right: 1px solid $gray;
         border-left: 1px solid $gray;
         border-bottom: 1px solid $gray;

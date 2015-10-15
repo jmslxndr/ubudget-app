@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
 	before_action :authenticate_user!, only: [:dashboard]
-	before_action :set_financial, only: [:dashboard, :index]
 
 	def index
 		@users = User.all
@@ -8,12 +7,14 @@ class UsersController < ApplicationController
 
 
 	def dashboard
-	end
-
-	private
-
-	def set_financial
 		@financial = current_user.financial
 	end
 
+	def destroy
+		if current_user
+			current_user.destroy
+			session[:user_id] = nil
+			redirect_to home_path, notice: "Your account has been deleted."
+		end
+	end
 end

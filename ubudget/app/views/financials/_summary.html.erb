@@ -1,15 +1,20 @@
-<div class="container" id="summary_form">
-	<h1 id="h1-center">Summary</h1>
-	
-	<div class="col-md-4" id="summary-income">
-		<p>Total income: $<%= @financial.credits %></p>
-	</div>
+<div class="summary_area">
+	<div class="container" id="summary_form">
+		<h1 id="h1-center">Summary</h1>
+		
+		<div class="col-md-3" id="summary-income">
+			<p>Total income: $<%= @financial.credits %></p>
+		</div>
+		<div class="col-md-3" id="summary-savings">
+			<p>Total savings: $<%= @financial.savings %></p>
+		</div>
 
-	<div class="col-md-4" id="summary-expenses">
-		<p>Total expenses: $<%= @financial.expenses %></p>
-	</div>
+		<div class="col-md-3" id="summary-expenses">
+			<p>Total expenses: $<%= @financial.expenses %></p>
+		</div>
 
-	<div class="col-md-4" id="summary-surplus">
-		<p>Total surplus: $<%= @financial.credits - @financial.expenses %></p>
+		<div class="col-md-3" id="summary-surplus">
+			<p>Total surplus: $<%= @financial.credits - @financial.expenses %></p>
+		</div>
 	</div>
-</div>
+</div>	
