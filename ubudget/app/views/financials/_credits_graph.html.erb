@@ -1,0 +1,18 @@
+<div id="financials1"></div>
+<script type="text/javascript">
+	creditsData = <%= raw @financial.credits_to_datum.to_json if @financial.credits %>;
+	nv.addGraph(function() {
+ 		var chart = nv.models.pieChart()
+      .x(function(d) { return d.label })
+      .y(function(d) { return d.value })
+      .showLabels(false);
+
+    d3.select("#financials1")
+    		.append("svg:svg")
+        .datum(creditsData)
+        .transition().duration(350)
+        .call(chart);
+
+  return chart;
+	});
+</script>
