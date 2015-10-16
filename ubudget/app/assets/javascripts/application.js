@@ -41,5 +41,4 @@ $(document).on('page:change', function() {
 	$('#myTabs a[href="#income"]').tab('show') // Select tab by name
 	$('#myTabs a[href="#expenses"]').tab('show') // Select tab by name
 	
-
 });

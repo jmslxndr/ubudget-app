@@ -1,20 +1,84 @@
 <div class="summary_area">
 	<div class="container" id="summary_form">
 		<h1 id="h1-center">Summary</h1>
+		<h4>Total Surplus: $<%= @financial.credits - @financial.expenses %></h4>
 		
-		<div class="col-md-3" id="summary-income">
-			<p>Total income: $<%= @financial.credits %></p>
-		</div>
-		<div class="col-md-3" id="summary-savings">
-			<p>Total savings: $<%= @financial.savings %></p>
-		</div>
+		<div class="row" id-"summary-row1">
+			<div class="col-md-6" id="summary-income">
+				<p>Total income: $<%= @financial.credits %></p>
 
-		<div class="col-md-3" id="summary-expenses">
-			<p>Total expenses: $<%= @financial.expenses %></p>
-		</div>
+				<div id="financials1"></div>
+				<script type="text/javascript">
+					creditsData = <%= raw @financial.credits_to_datum.to_json if @financial.credits %>;
+					nv.addGraph(function() {
+				 		var chart = nv.models.pieChart()
+				      .x(function(d) { return d.label })
+				      .y(function(d) { return d.value })
+				      .showLabels(false);
 
-		<div class="col-md-3" id="summary-surplus">
-			<p>Total surplus: $<%= @financial.credits - @financial.expenses %></p>
-		</div>
+				    d3.select("#financials1")
+				    		.append("svg:svg")
+				        .datum(creditsData)
+				        .transition().duration(350)
+				        .call(chart);
+
+				  return chart;
+					});
+				</script>
+			</div>
+		
+			<div class="col-md-6" id="summary-savings">
+				<p>Total savings: $<%= @financial.savings %></p>
+
+				<div id="financials2"></div>
+					<script type="text/javascript">
+						savingsData = <%= raw @financial.savings_to_datum.to_json if @financial.savings %>;
+						nv.addGraph(function() {
+					 		var chart = nv.models.pieChart()
+					      .x(function(d) { return d.label })
+					      .y(function(d) { return d.value })
+					      .showLabels(false);
+
+					    d3.select("#financials2")
+					    		.append("svg:svg")
+					        .datum(savingsData)
+					        .transition().duration(350)
+					        .call(chart);
+
+					  return chart;
+					});
+				</script>
+			</div>
+		</div>	
+		<hr>
+		<div class="row">
+			<div class="col-md-12" id="summary-expenses">
+				<p>Total expenses: $<%= @financial.expenses %></p>
+
+				<div id="financials3"></div>
+				<script type="text/javascript">
+					expensesData = <%= raw @financial.expenses_to_datum.to_json if @financial.expenses %>;
+					nv.addGraph(function() {
+				 		var chart = nv.models.pieChart()
+				      .x(function(d) { return d.label })
+				      .y(function(d) { return d.value })
+				      .showLabels(true);
+
+				    d3.select("#financials3")
+				    		.append("svg:svg")
+				        .datum(expensesData)
+				        .transition().duration(350)
+				        .call(chart);
+
+				  return chart;
+				});
+				</script>
+			</div>
+
+			<!-- <div class="col-md-6" id="summary-surplus">
+				<p>Total surplus: $<%= @financial.credits - @financial.expenses %></p>
+			</div> -->
+		</div>	
+
 	</div>
 </div>	
