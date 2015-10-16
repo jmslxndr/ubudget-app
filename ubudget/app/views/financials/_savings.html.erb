@@ -4,7 +4,7 @@
  		<h1 id="h1-center">Savings</h1>
  	</div>
 	
-	<div class="col-md-3">
+	<div class="col-md-6">
 		 <%= form_for(@financial) do |f| %>
 		 	<p>
 		 		<%= f.label :emergency_savings, "Emergency Savings" %><br>
@@ -16,7 +16,7 @@
 		 	</p>
 	</div>
 
-	<div class="col-md-3" id="column-before-graph">
+	<div class="col-md-6">
 		 	<p>
 		 		<%= f.label :retirement_savings, "Retirement Savings" %><br>
 		 		<%= f.text_field :retirement_savings, value: @financial.retirement_savings || 0  %>
@@ -26,14 +26,12 @@
 		 		<%= f.text_field :other_savings, value: @financial.other_savings || 0  %>
 		 	</p>
 		 	<hr>
-			<p><%= submit_tag 'Submit' %></p>
+			<p>
+				Add Savings:<br>
+				<%= submit_tag 'Submit' %>
+			</p>
 		<% end %>
 	</div>
 	
-	<div class="col-md-6">
-
-		
-
-	</div>
-
+	
 </div>	

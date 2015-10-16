@@ -4,7 +4,7 @@
  		<h1 id="h1-center">Income</h1>
  	</div>
 	
-	<div class="col-md-3">
+	<div class="col-md-6">
 	 <%= form_for(@financial) do |f| %>
 	 	<p>
 	 		<%= f.label :wage, "Income" %><br>
@@ -23,7 +23,7 @@
 	 		<%= f.text_field :investments, value: @financial.investments || 0  %>
 	 	</p>
 	</div>
-	<div class="col-md-3" id="column-before-graph"> 	
+	<div class="col-md-6"> 	
 	 	<p>
 	 		<%= f.label :misc_income, "Miscellaneous Income" %><br>
 	 		<%= f.text_field :misc_income, value: @financial.misc_income || 0   %>
@@ -37,15 +37,13 @@
 	 		<%= f.text_field :other_income2, value: @financial.other_income2 || 0  %>
 	 	</p>	
 	 	<hr>	 	
-		<p><%= submit_tag 'Submit' %></p>
+		<p>
+			Add Income:<br>
+			<%= submit_tag 'Submit' %>
+		</p>
 		<% end %>
 	</div>
 	
-	<div class="col-md-6">
-		
-		
-
-	</div>
 
 </div>	
 

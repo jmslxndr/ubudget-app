@@ -2,14 +2,14 @@
 	
 	<h1 id="h1-center">Expenses</h1>
 	
-	<div class="col-md-2">
+	<div class="col-md-4">
 		 <%= form_for(@financial) do |f| %>
 		 	<p>
 		 		<%= f.label :rent, "Rent/Mortgage" %><br>
 		 		<%= f.text_field :rent, value: @financial.rent || 0  %>
 		 	</p>
 		 	<p>
-		 		<%= f.label :second_mortgage, "Second Mortgage" %>
+		 		<%= f.label :second_mortgage, "Second Mortgage" %><br>
 		 		<%= f.text_field :second_mortgage, value: @financial.second_mortgage || 0  %>
 		 	</p>
 		 	<p>
@@ -17,11 +17,11 @@
 		 		<%= f.text_field :home_maintenance, value: @financial.home_maintenance || 0 %>
 		 	</p>
 		 	<p>
-		 		<%= f.label :home_improvement, "home_improvement" %>
+		 		<%= f.label :home_improvement, "home_improvement" %><br>
 		 		<%= f.text_field :home_improvement, value: @financial.home_improvement|| 0  %>
 		 	</p>
 		 	<p>
-		 		<%= f.label :home_insurance, "Home Insurance" %>
+		 		<%= f.label :home_insurance, "Home Insurance" %><br>
 		 		<%= f.text_field :home_insurance, value: @financial.home_insurance || 0  %>
 		 	</p>	
 		 	<p>
@@ -29,15 +29,15 @@
 		 		<%= f.text_field :electricity, value: @financial.electricity || 0  %>
 		 	</p>
 		 	<p>
-		 		<%= f.label :cable, "Cable" %>
+		 		<%= f.label :cable, "Cable" %><br>
 		 		<%= f.text_field :cable, value: @financial.cable || 0  %>
 		 	</p>
 		 	<p>
-		 		<%= f.label :internet, "Internet" %>
+		 		<%= f.label :internet, "Internet" %><br>
 		 		<%= f.text_field :internet, value: @financial.internet || 0  %>
 		 	</p>
 		 	<p>
-		 		<%= f.label :computer_costs, "Computer Costs" %>
+		 		<%= f.label :computer_costs, "Computer Costs" %><br>
 		 		<%= f.text_field :computer_costs, value: @financial.computer_costs || 0  %>
 		 	</p>
 		 	<p>
@@ -48,13 +48,13 @@
 		 		<%= f.label :gas_oil, "Gas/Oil" %><br>
 		 		<%= f.text_field :gas_oil, value: @financial.gas_oil || 0   %>
 		 	</p>
+	
 		 	<p>
 		 		<%= f.label :phone, "Phone" %><br>
 		 		<%= f.text_field :phone, value: @financial.phone || 0   %>
-		 	</p>
-		</div> 
-		
-		<div class="col-md-2">	
+		 	</p>	
+	</div>
+	<div class="col-md-4">		 	
 		 <p>
 		 		<%= f.label :car_insurance, "Car Insurance" %><br>
 		 		<%= f.text_field :car_insurance, value: @financial.car_insurance || 0   %>
@@ -68,60 +68,59 @@
 		 		<%= f.text_field :gas, value: @financial.gas || 0   %>
 		 	</p>
 		 	<p>
-		 		<%= f.label :auto_repairs, "Auto Repairs" %>
+		 		<%= f.label :auto_repairs, "Auto Repairs" %><br>
 		 		<%= f.text_field :auto_repairs, value: @financial.auto_repairs || 0  %>
 		 	</p>
 		 	<p>
-		 		<%= f.label :other_auto, "Other Auto" %>
+		 		<%= f.label :other_auto, "Other Auto" %><br>
 		 		<%= f.text_field :other_auto, value: @financial.other_auto || 0  %>
 		 	</p>
 		 	<p>
-		 		<%= f.label :travel, "Travel" %>
+		 		<%= f.label :travel, "Travel" %><br>
 		 		<%= f.text_field :travel, value: @financial.travel || 0  %>
-		 	</p>
+		 	</p>	 	
 		 	<p>
 		 		<%= f.label :food, "Food" %><br>
 		 		<%= f.text_field :food, value: @financial.food || 0  %>
 		 	</p>
 		 	<p>
-		 		<%= f.label :dining_out, "Dining Out" %>
+		 		<%= f.label :dining_out, "Dining Out" %><br>
 		 		<%= f.text_field :dining_out, value: @financial.dining_out || 0  %>
 		 	</p>
 		 	<p>
-		 		<%= f.label :dry_cleaning, "Dry Cleaning" %>
+		 		<%= f.label :dry_cleaning, "Dry Cleaning" %><br>
 		 		<%= f.text_field :dry_cleaning, value: @financial.dry_cleaning || 0  %>
 		 	</p>
 		 	<p>
-		 		<%= f.label :laundry, "Laundry" %>
+		 		<%= f.label :laundry, "Laundry" %><br>
 		 		<%= f.text_field :laundry, value: @financial.laundry || 0  %>
 		 	</p>
+		 	
 		 	<p>
-		 		<%= f.label :entertainment, "Entertainment" %>
+		 		<%= f.label :entertainment, "Entertainment" %><br>
 		 		<%= f.text_field :entertainment, value: @financial.entertainment || 0  %>
 		 	</p>
-		 	<hr>
-		 	<p><%= submit_tag 'Submit' %></p>
-		</div> 	
-		
-		<div class="col-md-2" id="column-before-graph">
+		 		
 			<p>
 		 		<%= f.label :insurance, "Health Insurance" %><br>
 		 		<%= f.text_field :insurance, value: @financial.insurance || 0   %>
 		 	</p>
+	</div>
+	<div class="col-md-4">	 	
 		 	<p>
-		 		<%= f.label :dental_insurance, "Dental Insurance" %>
+		 		<%= f.label :dental_insurance, "Dental Insurance" %><br>
 		 		<%= f.text_field :dental_insurance, value: @financial.dental_insurance || 0  %>
 		 	</p>
 		 	<p>
-		 		<%= f.label :life_insurance, "Life Insurance" %>
+		 		<%= f.label :life_insurance, "Life Insurance" %><br>
 		 		<%= f.text_field :life_insurance, value: @financial.life_insurance || 0  %>
 		 	</p>
 		 	<p>
-		 		<%= f.label :childcare, "Child Care" %>
+		 		<%= f.label :childcare, "Child Care" %><br>
 		 		<%= f.text_field :childcare, value: @financial.childcare || 0  %>
 		 	</p>
 		 	<p>
-		 		<%= f.label :baby_costs, "Baby Costs" %>
+		 		<%= f.label :baby_costs, "Baby Costs" %><br>
 		 		<%= f.text_field :baby_costs, value: @financial.baby_costs || 0  %>
 		 	</p>	
 		 	<p>
@@ -137,33 +136,30 @@
 		 		<%= f.text_field :other_loans, value: @financial.other_loans || 0   %>
 		 	</p>
 		 	 <p>
-		 		<%= f.label :misc_expenses, "Misc. Expenses" %>
+		 		<%= f.label :misc_expenses, "Misc. Expenses" %><br>
 		 		<%= f.text_field :misc_expenses, value: @financial.misc_expenses || 0  %>
 		 	</p>	
 		 	<p>
-		 		<%= f.label :other_expenses1, "Other Expenses 1" %>
+		 		<%= f.label :other_expenses1, "Other Expenses 1" %><br>
 		 		<%= f.text_field :other_expenses1, value: @financial.other_expenses1 || 0  %>
 		 	</p>		 	
 		 	<p>
-		 		<%= f.label :other_expenses2, "Other Expenses 2" %>
+		 		<%= f.label :other_expenses2, "Other Expenses 2" %><br>
 		 		<%= f.text_field :other_expenses2, value: @financial.other_expenses2 || 0  %>
 		 	</p>	
 		 	<p>
-		 		<%= f.label :other_expenses3, "Other Expenses 3" %>
+		 		<%= f.label :other_expenses3, "Other Expenses 3" %><br>
 		 		<%= f.text_field :other_expenses3, value: @financial.other_expenses3 || 0  %>
 		 	</p>	
-		 		
-		<% end %>
-		<br>
-		<br>
-		<br>
-		</div>	
-		
-		<div class="col-md-6">
-			<!-- THIS IS WHERE THE GRAPH GOES -->
-			<p>This is where the graph goes.</p>
-		</div>
+	</div>	 		
+		 	<hr>
 
+		 	<p>
+		 		Add Expenses:<br>
+		 		<%= submit_tag 'Submit' %>
+		 	</p>
+			<% end %>	
+				
 </div>
 
 	
