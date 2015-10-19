@@ -76,7 +76,7 @@ class Financial < ActiveRecord::Base
 		data << {label: "Insurance", value: insurance.to_f}
 		data << {label: "Car Payment", value: car_payment.to_f}
 		data << {label: "Gas", value: gas.to_f}
-		data << {label: "Car Insurance", value: spouse_income.to_f}
+		data << {label: "Car Insurance", value: car_insurance.to_f}
 		data << {label: "Credit Cards", value: credit_cards.to_f}
 		data << {label: "Student Loan", value: student_loan.to_f}
 		data << {label: "Other Loans", value: other_loans.to_f}

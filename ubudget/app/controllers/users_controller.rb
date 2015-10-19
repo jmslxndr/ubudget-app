@@ -9,11 +9,4 @@ class UsersController < ApplicationController
 		@financial = current_user.financial
 	end
 
-	def destroy
-		if current_user
-			current_user.destroy
-			session[:user_id] = nil
-			redirect_to home_path, notice: "Your account has been deleted."
-		end
-	end
 end

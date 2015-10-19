@@ -5,7 +5,7 @@
 	<div class="col-md-4">
 		 <%= form_for(@financial) do |f| %>
 		 	<p>
-		 		<%= f.label :rent, "Rent/Mortgage" %><br>
+		 		<%= f.label :rent, "Mortgage/Rent" %><br>
 		 		<%= f.text_field :rent, value: @financial.rent || 0  %>
 		 	</p>
 		 	<p>
@@ -17,7 +17,7 @@
 		 		<%= f.text_field :home_maintenance, value: @financial.home_maintenance || 0 %>
 		 	</p>
 		 	<p>
-		 		<%= f.label :home_improvement, "home_improvement" %><br>
+		 		<%= f.label :home_improvement, "Home Improvement" %><br>
 		 		<%= f.text_field :home_improvement, value: @financial.home_improvement|| 0  %>
 		 	</p>
 		 	<p>
