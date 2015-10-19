@@ -28,7 +28,7 @@
 				<nav>
 					<% if current_user %>					
 						<li><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></li>
-						<li><%= link_to 'Delete Account', delete_account_path(current_user), method: :delete %></li>
+						<li><%= link_to 'Edit Account', edit_user_registration_path(current_user) %></li>
 					<% end %>
 				</nav>
 			</div>	
@@ -48,7 +48,10 @@
 			</div>
 			<div class="col-md-6">
 				<h2>Contact Us</h2>
-
+				<ul>		
+					<li>New York, NY</li>
+					<li><a href="mailto:ngati016@hotmail.com">Send Us An Email!</a></li>
+				</ul>
 			</div>
 	</div>
 	</footer>
